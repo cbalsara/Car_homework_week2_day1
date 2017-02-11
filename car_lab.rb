@@ -11,8 +11,10 @@ attr_reader :name, :fuel, :speed
     @speed = @speed + 10 
   end 
 
+# the speed should not be able to go past 0 
   def break
     @speed = @speed - 10
+    @speed = 0 if @speed < 0
   end 
 
 

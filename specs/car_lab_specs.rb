@@ -32,6 +32,11 @@ def test_car_break
   assert_equal(0, @car_1.speed)
 end 
 
+def test_car_speed_max_at_0
+  @car_1.break()
+  assert_equal(0, @car_1.speed)
+end 
+
 
 
 
