@@ -6,6 +6,11 @@ attr_reader :name, :fuel, :speed
     @speed = car_speed
   end 
 
+  def accelerate
+    @fuel = @fuel - 5 
+    @speed = @speed + 10 
+  end 
+
 
 
 
