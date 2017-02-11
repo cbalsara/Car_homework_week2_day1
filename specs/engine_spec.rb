@@ -16,6 +16,12 @@ class TestEngine < MiniTest::Test
     assert_equal(100, @sports_engine.fuel)
   end 
 
+  def test_engine_accelerate
+    @sports_engine.accelerate()
+    assert_equal(100, @sports_engine.speed)
+    assert_equal(50, @sports_engine.fuel) 
+  end 
+
 
 
 
