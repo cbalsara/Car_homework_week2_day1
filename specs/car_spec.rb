@@ -1,11 +1,13 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../car_lab')
+require_relative('../car')
+require_relative('../engine')
 
 class TestCar < MiniTest::Test
 
 def setup
-  @car_1 = Car.new("SpeedRacer", 100, 0)
+  @engine1 = Engine.new(0, 100)
+  @car_1 = Car.new("SpeedRacer", 100, 0, @engine1)
 end 
 
 def test_car_has_name
@@ -35,6 +37,12 @@ end
 def test_car_speed_max_at_0
   @car_1.break()
   assert_equal(0, @car_1.speed)
+end 
+
+def test_car_uses_new_engine
+  @car_1.accelerate_sports_car()
+  assert_equal(0, @car_1.speed)
+  assert_equal(100, @car_1.fuel)
 end 
 
 

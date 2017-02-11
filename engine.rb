@@ -5,9 +5,10 @@ attr_reader :speed, :fuel
     @fuel = engine_fuel
   end 
 
-  def accelerate
+  def accelerate()
     @fuel = @fuel - 50 
     @speed = @speed + 100
+    @fuel = 0 if @fuel < 0
   end 
 
 end 
