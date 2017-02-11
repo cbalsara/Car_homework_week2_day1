@@ -11,6 +11,10 @@ attr_reader :name, :fuel, :speed
     @speed = @speed + 10 
   end 
 
+  def break
+    @speed = @speed - 10
+  end 
+
 
 
 
