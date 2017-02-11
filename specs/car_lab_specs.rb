@@ -17,6 +17,10 @@ def test_full_fuel_level
   assert_equal(100, @car_1.fuel)
 end 
 
+def test_speed_starts_at_0
+  assert_equal(0, @car_1.speed)
+end 
+
 
 
 
